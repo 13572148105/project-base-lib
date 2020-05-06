@@ -1,0 +1,179 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            applicationId    : "com.orz.im.joincall",
+            minSdkVersion    : 19,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+    //version配置
+    versions = [
+            appcompat_version       : "1.1.0",
+            core_ktx_version        : "1.2.0",
+            support_v4_version      : "1.0.0",
+            design_version          : '1.0.0',
+            lifecycle_version       : '2.2.0-rc01',
+            constraintlayout_version: '1.1.3',
+            annotation_version      : '1.1.0',
+            nav_version             : '2.3.0-alpha01',
+            viewpager2_version      : '1.0.0',
+            recyclerview_version    : '1.0.0',
+            cardview_version        : '1.0.0',
+            multidex_version        : '1.0.3',
+            kotlin_version          : '1.3.61'
+    ]
+
+    //androidx
+    androidx = [
+            appcompat              : "androidx.appcompat:appcompat:${versions['appcompat_version']}",
+            core_ktx               : "androidx.core:core-ktx:${versions['core_ktx_version']}",
+            support_v4             : "androidx.legacy:legacy-support-v4:${versions['support_v4_version']}",
+            design                 : "com.google.android.material:material:${versions['design_version']}",
+            constraintlayout       : "androidx.constraintlayout:constraintlayout:${versions["constraintlayout_version"]}",
+            lifecycle_extensions   : "androidx.lifecycle:lifecycle-extensions:${versions['lifecycle_version']}",
+            lifecycle_viewmodel_ktx: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions['lifecycle_version']}",
+            "recyclerview"         : "androidx.recyclerview:recyclerview:${versions['recyclerview_version']}",
+            "cardview"             : "androidx.cardview:cardview:${versions['cardview_version']}",
+            viewpager2             : "androidx.viewpager2:viewpager2:${versions['viewpager2_version']}",
+            'nav-fragment'         : "androidx.navigation:navigation-fragment-ktx:${versions['nav_version']}",
+            'nav-ui'               : "androidx.navigation:navigation-ui-ktx:${versions['nav_version']}",
+            annotation             : "androidx.annotation:annotation:${versions['annotation_version']}",
+            multidex               : "com.android.support:multidex:${versions['multidex_version']}"
+    ]
+
+    test = [
+            junit   : 'junit:junit:4.12',
+            ext     : 'androidx.test.ext:junit:1.1.1',
+            espresso: 'androidx.test.espresso:espresso-core:3.2.0'
+    ]
+
+    //network
+    retrofit = [
+            retrofit      : "com.squareup.retrofit2:retrofit:2.8.1",
+            converter_gson: "com.squareup.retrofit2:converter-gson:2.8.1",
+    ]
+
+    //依赖第三方配置
+    dependencies = [
+            //kotlin
+            "kotlin-android"         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions['kotlin_version']}",
+            "kotlin-reflect"         : "org.jetbrains.kotlin:kotlin-reflect:${versions['kotlin_version']}",
+
+            //glide
+            "glide"                  : "com.github.bumptech.glide:glide:4.11.0",
+            "glide-compiler"         : "com.github.bumptech.glide:compiler:4.11.0",
+
+            //immersion bar
+            "immersionbar"           : 'com.gyf.immersionbar:immersionbar:3.0.0',
+            "immersionbar-ktx"       : 'com.gyf.immersionbar:immersionbar-ktx:3.0.0',
+
+            //bus
+            "eventbus"               : 'org.greenrobot:eventbus:3.2.0',
+
+            //MMKV是在微信中使用的高效，小型，易于使用的移动键值存储框架
+            "mmkv"                   : 'com.tencent:mmkv-static:1.0.24',
+
+            //banner
+            "banner"                 : 'com.youth.banner:banner:2.0.8',
+
+            //base adapter
+            "baseAdapter"            : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3",
+
+            //smart refresh
+            "refresh"                : 'com.scwang.smart:refresh-layout-kernel:2.0.0',      //核心必须依赖
+            "refresh-classics-header": 'com.scwang.smart:refresh-header-classics:2.0.0',   //经典刷新头 //pictureSelector
+
+            //PictureSelector
+            "picture-library"        : 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.2',
+
+            //今日头条适配方案
+            "autosize"               : 'me.jessyan:autosize:1.2.1',
+
+            //material-dialogs
+            "material-dialogs-core"  : "com.afollestad.material-dialogs:core:3.3.0",
+
+            //circle image view
+            "circleimageview"        : "de.hdodenhof:circleimageview:3.1.0",
+
+            //rxbinding
+            "rxbinding"              : 'com.jakewharton.rxbinding3:rxbinding:3.1.0',
+            "rxbinding-material"     : 'com.jakewharton.rxbinding3:rxbinding-material:3.1.0',
+
+            //zxing
+            "zxing"                  : "cn.bingoogolapple:bga-qrcode-zxing:1.3.6",
+
+            //json
+            "fastjson"               : 'com.alibaba:fastjson:1.2.61',
+            "gson"                   : "com.google.code.gson:gson:2.8.5",
+
+            //数据库
+            "greendao"               : "org.greenrobot:greendao:3.2.2",
+            "greendao_upgrade_helper": 'io.github.yuweiguocn:GreenDaoUpgradeHelper:v2.2.1',
+
+            //load-view
+            "loadview"               : 'com.dylanc:loadinghelper:2.0.0',
+            "loadsir"                : "com.kingja.loadsir:loadsir:1.3.8",
+
+            //Android-SpinKit
+            "android-spinkit"        : "com.github.ybq:Android-SpinKit:1.4.0",
+
+            //AndroidPickerView
+            "picker-view"            : 'com.contrarywind:Android-PickerView:4.1.9',
+
+            //calendarView
+            "calendar-view"          : "com.haibin:calendarview:3.6.7",
+
+            //flexbox
+            "flexbox"                : "com.google.android:flexbox:0.3.1",
+
+            //tab
+            "bottom-tab"             : 'me.majiajie:pager-bottom-tab-strip:2.3.0X',
+            "flycotablayout_lib"     : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "smart-table"            : "com.github.huangyanbin:SmartTable:2.2.0",
+
+            //titlebar
+            "titlebar"               : 'com.hjq:titlebar:6.0',
+
+            //Android 仿钉钉、微信 群聊组合头像
+            "combinebitmap"          : 'com.github.Othershe:CombineBitmap:1.0.5',
+
+            //MarqueeView
+            "marqueeview"            : 'com.sunfusheng:MarqueeView:1.4.1',
+
+            //BottomBarLayout
+            "bottombarlayout"        : "com.github.chaychan:BottomBarLayout:1.2.0",
+
+            //index-bar
+            "index-bar"              : 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0',
+
+            //swipe recyclerView
+            "swipe-recyclerView"     : 'com.yanzhenjie.recyclerview:x:1.3.2',
+
+            //AndroidUtilCode
+            "android-util-code"      : 'com.blankj:utilcodex:1.28.1',
+
+            //NiceDialog
+            "nicedialog"             : 'com.github.SheHuan:NiceDialog:1.2.0',
+
+            //socket
+            "websocket"              : "org.java-websocket:Java-WebSocket:1.4.1",
+
+            //hellodaemon
+            "hellodaemon"            : 'com.xdandroid:hellodaemon:1.2.2',
+
+            //recovery
+            "recovery"               : 'com.zxy.android:recovery:1.0.0',
+
+            //crashreport
+            "crashreport"            : 'com.tencent.bugly:crashreport:3.1.0',
+
+    ]
+
+    androidxs = androidx.values()
+    network = retrofit.values()
+}
+
+

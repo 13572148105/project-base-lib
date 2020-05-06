@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.androidxs
+    api rootProject.ext.network
+    api rootProject.ext.dependencies["kotlin-android"]
+    kapt rootProject.ext.dependencies["kotlin-reflect"]
+    //glide
+    api rootProject.ext.dependencies["glide"]
+    kapt rootProject.ext.dependencies["glide-compiler"]
+    //immersion
+    api rootProject.ext.dependencies["immersionbar"]
+    api rootProject.ext.dependencies["immersionbar-ktx"]
+    //title
+    api rootProject.ext.dependencies["titlebar"]
+    //loadsir
+    api rootProject.ext.dependencies["loadsir"]
+    //event bus
+    api rootProject.ext.dependencies["eventbus"]
+    //picture-library
+    api rootProject.ext.dependencies["picture-library"]
+    //android-spin kit
+    api rootProject.ext.dependencies["android-spinkit"]
+    //smart refresh
+    api rootProject.ext.dependencies["refresh"]
+    api rootProject.ext.dependencies["refresh-classics-header"]
+    //android-util-code
+    api rootProject.ext.dependencies["android-util-code"]
+    //mmkv
+    api rootProject.ext.dependencies["mmkv"]
+
+
+}

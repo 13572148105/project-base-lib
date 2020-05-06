@@ -1,0 +1,3 @@
+rootProject.name='Even breathe'
+include ':app'
+include ':globallib'
